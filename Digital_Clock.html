@@ -2,10 +2,30 @@
 <html>
 <head>
 	<title>Digital Clock</title>
+	<style type="text/css">
+		
+  body
+   {
+   	background: #000;
+   }
+
+   .clock
+   {
+   	position: absolute;
+   	top: 50%;
+   	left: 50%;
+   	transform: translateX(-50%) translateY(-50%);
+   	color: #fff;
+   	font-size: 80px;
+   	border: 1px solid #ccc;
+   	padding: 0px 5px 0px 5px;
+   }
+
+	</style>
 </head>
 <body>
 
-	<div id="MyClockDisplay"><div>
+	<div id="MyClockDisplay" class="clock"><div>
 		<script type="text/javascript">
 
 			function showTime()
@@ -31,16 +51,15 @@
 
 
 
-				var time = h + ":" + m +":" +s + session;
+				var time = h + ":" + m +":" +s + " "+ session;
 				document.getElementById("MyClockDisplay").innerText = time;
-				document.getElementById("MyClockDisplay").innerContent = time;
+				document.getElementById("MyClockDisplay").textContent = time;
 
 				showTimeout(showTime,1000);
 
-			}
-
-			showTime();
-
+               }
+               showTime();
+		
 		</script>
 
 </body>
