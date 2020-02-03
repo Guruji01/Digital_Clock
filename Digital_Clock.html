@@ -53,13 +53,18 @@
 
 				var time = h + ":" + m +":" +s + " "+ session;
 				document.getElementById("MyClockDisplay").innerText = time;
-				document.getElementById("MyClockDisplay").textContent = time;
-
-				showTimeout(showTime,1000);
+				document.getElementById("MyClockDisplay").innerContent = time;
 
                }
                showTime();
-		
+
+               setInterval(showTime,1000);
+				
+
+			
+
+			
+
 		</script>
 
 </body>
